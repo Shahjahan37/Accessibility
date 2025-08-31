@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
-  </head>
-  <body>
-    <main>
-      <div class="container"></div>
-    </main>
 
-    <script src="a11y.js" defer></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <main>
+    <div class="container"></div>
+  </main>
+
+  <div class="center">
+    <button id="open-popup">Open Modal</button>
+  </div>
+
+  <div class="popup" id="popup">
+    <div class="overlay"></div>
+    <div class="popup-content">
+      <h2>Modal</h2>
+      <p>This is the content of the modal. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum eligendi vero
+        nulla illo dolores quibusdam sed dolore libero sint quidem. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Blanditiis aperiam molestiae dolorem corporis commodi odio aspernatur dicta eaque deserunt quas.</p>
+      <div class="controls">
+        <button class="close-btn">Close</button>
+        <button class="submit-btn">Submit</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="a11y.js" defer></script>
+</body>
+
 </html>
