@@ -14,13 +14,16 @@
   </main>
 
   <div class="center">
-    <button id="open-popup">Open Modal</button>
+    <div class="btn-container">
+      <button id="open-popup">Open 1st Modal</button>
+      <button id="open-popup2">Open 2nd Modal</button>
+    </div>
   </div>
 
   <div class="popup" id="popup">
     <div class="overlay"></div>
     <div class="popup-content">
-      <h2>Modal</h2>
+      <h2>1st Modal</h2>
       <p>This is the content of the modal. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum eligendi vero
         nulla illo dolores quibusdam sed dolore libero sint quidem. Lorem ipsum dolor sit amet consectetur adipisicing
         elit. Blanditiis aperiam molestiae dolorem corporis commodi odio aspernatur dicta eaque deserunt quas.</p>
@@ -31,6 +34,22 @@
     </div>
   </div>
 
+  <div class="popup" id="new-popup">
+    <div class="overlay"></div>
+    <div class="popup-content">
+      <h2>2nd Modal</h2>
+      <p>This is the content of the modal. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum eligendi vero
+        nulla illo dolores quibusdam sed dolore libero sint quidem. Lorem ipsum dolor sit amet consectetur adipisicing
+        elit. Blanditiis aperiam molestiae dolorem corporis commodi odio aspernatur dicta eaque deserunt quas. Lorem
+        ipsum dolor sit amet consectetur adipisicing elit. Impedit beatae quod iusto eligendi recusandae totam possimus
+        temporibus id dolores aut?</p>
+      <div class="controls">
+        <button class="close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="trapFocus.js" defer></script>
   <script src="a11y.js" defer></script>
 </body>
 

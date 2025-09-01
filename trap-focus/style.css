@@ -11,7 +11,7 @@
   height: 100vh;
 }
 
-#open-popup {
+#open-popup, #open-popup2 {
   padding: 8px 16px;
   background-color: #007bff;
   color: #fff;
