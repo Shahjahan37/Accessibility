@@ -1,0 +1,35 @@
+.container {
+  max-width: 300px;
+  margin: 20px auto;
+  padding: 0;
+  list-style: none;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 16px;
+}
+
+.container > div,
+.container > li {
+  background: #f8f9fa;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.container > div:nth-child(odd):hover,
+.container > li:nth-child(odd):hover {
+  background: #4ed859;
+  color: #fff;
+  transform: translateX(-10px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.container > div:nth-child(even):hover,
+.container > li:nth-child(even):hover {
+  background: #4ed859;
+  color: #fff;
+  transform: translateX(10px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
