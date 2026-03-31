@@ -1,0 +1,97 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Accessible Form Example</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container" id="main">
+        <h1>Signup (Accessible Form)</h1>
+        <form id="signupForm" novalidate>
+            <div class="form-grid">
+                <div class="field-wrap">
+                    <label for="firstName">First name <span aria-hidden="true">*</span></label>
+                    <input id="firstName" name="firstName" type="text" autocomplete="given-name" required
+                        aria-required="true" aria-describedby="firstNameHelp">
+                    <div id="firstNameHelp" class="hint">Enter your given name.</div>
+                    <div id="firstNameError" class="error-text" aria-live="polite"></div>
+                </div>
+
+                <div class="field-wrap">
+                    <label for="lastName">Last name</label>
+                    <input id="lastName" name="lastName" type="text" autocomplete="family-name"
+                        aria-describedby="lastNameHelp">
+                    <div id="lastNameHelp" class="hint">Optional.</div>
+                    <div id="lastNameError" class="error-text" aria-live="polite"></div>
+                </div>
+
+                <div class="field-wrap full">
+                    <label for="email">Email address <span aria-hidden="true">*</span></label>
+                    <input id="email" name="email" type="email" autocomplete="email" required aria-required="true"
+                        aria-describedby="emailHelp">
+                    <div id="emailHelp" class="hint">We will use this to sign you in.</div>
+                    <div id="emailError" class="error-text" aria-live="polite"></div>
+                </div>
+
+                <div class="field-wrap">
+                    <label for="password">Password <span aria-hidden="true">*</span></label>
+                    <div style="display:flex;gap:8px;align-items:center;">
+                        <input id="password" name="password" type="password" required aria-required="true"
+                            aria-describedby="passwordHelp passwordStrength" style="flex:1">
+                        <button type="button" id="togglePwd" aria-pressed="false" aria-controls="password"
+                            aria-label="Show password">Show</button>
+                    </div>
+                    <div id="passwordHelp" class="hint">Min 8 chars, mixed case, number.</div>
+                    <div id="passwordStrength" class="hint" aria-hidden="true">Strength: <span
+                            id="pwdStrengthVal">—</span></div>
+                    <div id="passwordError" class="error-text" aria-live="polite"></div>
+                </div>
+
+                <div class="field-wrap">
+                    <label for="country">Country</label>
+                    <select id="country" name="country" aria-describedby="countryHelp">
+                        <option value="">Choose…</option>
+                        <option>India</option>
+                        <option>United States</option>
+                        <option>United Kingdom</option>
+                        <option>Australia</option>
+                    </select>
+                    <div id="countryHelp" class="hint">This helps set locale defaults.</div>
+                </div>
+
+                <fieldset class="full" id="prefs">
+                    <legend>Preferences</legend>
+                    <div class="field-wrap">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">Subscribe to newsletter</label>
+                    </div>
+                    <div class="field-wrap">
+                        <input type="checkbox" id="terms" name="terms" required aria-required="true">
+                        <label for="terms">I agree to the <a href="#" tabindex="0">terms</a> <span
+                                aria-hidden="true">*</span></label>
+                        <div id="termsError" class="error-text" aria-live="polite"></div>
+                    </div>
+                </fieldset>
+
+                <div class="field-wrap full">
+                    <label for="bio">Bio</label>
+                    <textarea id="bio" name="bio" aria-describedby="bioHelp"></textarea>
+                    <div id="bioHelp" class="hint">Tell us a little about yourself (optional).</div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <button type="submit" id="submitBtn">Create account</button>
+                <button type="reset">Reset</button>
+            </div>
+            <div id="formStatus" role="status" aria-live="polite" style="margin-top:12px"></div>
+        </form>
+    </div>
+
+    <script src="a11y.js"></script>
+</body>
+
+</html>
